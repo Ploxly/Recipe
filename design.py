@@ -5,37 +5,13 @@ import sys
 #Ask for Instructions
 #Save/Store it into dictionary
 def create():
-    ask_recipe = ''
-    ask_instruction = ''
-    ask_ingredients = ''
-    recipe_dict = dict()
-    #counter = str(1)
-    print("Create a recipe! Type 'exit' to leave")
+    ask_recipe = input("Recipe Name: ")
+    ask_instruction = input("Instructions: ")
+    ask_create = input("Ingredients: ") 
 
-    for ask_recipe in range (1):
-        ask_recipe = input("Recipe Name: ")
-        recipe_dict.update(ask_recipe = 'Nothing Yet')
-        if ask_recipe == 'exit':
-            exit(1)
-
-    while ask_instruction != 'exit':
-        ask_instruction = input("Instructions: ")
-        if ask_instruction == 'exit':
-            while ask_ingredients != 'exit':
-                ask_ingredients = input("Ingredients: ")  
-                if ask_ingredients == 'exit':
-                    #recipe_dict.update(ask_recipe = ask_instruction)
-                    #recipe_dict.update(ask_recipe, ask_ingredients)
-                    for key, value in recipe_dict.items():
-                        print(key,':',value)
-                        exit(1)
-
-
-
-    print("Create a recipe! Enter '0' to exit")
     print(ask_recipe)
     print(ask_instruction)
-    print(ask_ingredients)
+    print(ask_create)
 
 def listrecipe():
     print("listrecipe")
