@@ -26,3 +26,23 @@ Frontend (UI & UX)
 User -> Frontend -> Backend
 Backend -> Frontend -> User
 User x> Backend
+
+
+--------------------------
+
+# Create the terminal UI
+    * create an create function
+    * create a list function
+    * create a update function
+    * create a delete function
+    
+    ## myprogram <Action> [args]
+
+
+Homework: 08/05/2019
+1) Commit current code to your github repository.
+2) Finish the create function and put it up for code review.
+    * Finish the create function
+    * Make another branch
+    * and then push that branch to github
+    * open a pull request
