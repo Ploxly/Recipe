@@ -1,5 +1,4 @@
 import sys
-#import json
 #prompt a user to create a recipe
 #Ask for Ingredients
 #Ask for Instructions
