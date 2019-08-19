@@ -46,3 +46,8 @@ Homework: 08/05/2019
     * Make another branch
     * and then push that branch to github
     * open a pull request
+
+Homework: 08/14/2019
+1) Upload what you have to github master branch. Focus on making the commits meaningful.
+2) Finish the create function
+3) Put the finished create function up for review
