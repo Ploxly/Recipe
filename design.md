@@ -39,10 +39,6 @@ User x> Backend
     ## myprogram <Action> [args]
 
 
-Homework: 08/05/2019
-1) Commit current code to your github repository.
-2) Finish the create function and put it up for code review.
-    * Finish the create function
-    * Make another branch
-    * and then push that branch to github
-    * open a pull request
+Homework: 08/28/2019
+# Commit what you have to the pull request and and wait for approval before merging it to master
+# Finish the Create and List Recipe functions make the list recipe function pretty.
