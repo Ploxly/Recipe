@@ -7,7 +7,7 @@ class Recipe:
         self.instructions = []
         self.name = ""
 
-#Save/Store it into dictionary
+#Save/Store it into dictionary, Test it
 def create():
     recipe = Recipe()
     recipe_dict = {}
@@ -30,8 +30,10 @@ def create():
         recipe.instructions.append(instructions)
 
     recipe_dict[recipe.name] = recipe
+
+    print(list(recipe_dict[recipe.name]))
+
     
-    print(recipe_dict[recipe.name])
 
 def listrecipe():
     print("listrecipe")
