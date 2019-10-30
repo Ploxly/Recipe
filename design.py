@@ -1,6 +1,8 @@
 import sys
+#import json
 
 # Recipe is a representation of a cooking recipe
+recipe_dict = {}
 class Recipe:
     def __init__(self):
         self.ingredients = []
@@ -10,7 +12,6 @@ class Recipe:
 #Save/Store it into dictionary, Test it
 def create():
     recipe = Recipe()
-    recipe_dict = {}
 
     print("Create a recipe!")
     recipe.name = input("Recipe Name: ")
@@ -28,15 +29,46 @@ def create():
         if instructions == 'exit':
             break
         recipe.instructions.append(instructions)
-
+    
     recipe_dict[recipe.name] = recipe
 
-    print(list(recipe_dict[recipe.name]))
+    recipe_file_write = open('recipe.txt','w')
+    recipe_file_write.write(str(recipe_dict))
+    recipe_file_write.close()
 
-    
+    #with open('recipe.txt', 'w') as json_file:
+        #json.dump(recipe_dict, json_file)
 
+    #open a file, change recipe dict into json
+    #write something to that file, check it (read)
+
+    return
+    #recipedict = recipe_dict[recipe.name]
+    #print(recipedict)
+    #print(recipedict.ingredients)
+    #print(recipedict.instructions)
+
+# The list recipe function should be able to take a recipe name
+# and print out just that recipe.
+#1. Get recipe name
+#2. Find recipe name in dict
+#3. Print out that recipe
 def listrecipe():
-    print("listrecipe")
+    recipe_file_read = open('recipe.txt','r')
+    print(recipe_file_read.read())
+    #with open('recipe.txt', 'r') as recipecheck:
+        #data = json.load(recipecheck)
+    #recipe = Recipe()
+
+    #print("Your recipe!")
+    #recipe.name = input("Name of Created recipe: ")
+
+    #if recipe.name in recipe_dict:
+        #recipe_test = recipe_dict[recipe.name]
+        #print(recipe_test.name)
+
+    #else:
+        #print("you're terrible shane") or print("you suck shane")
 
 def update():
     print("update")
