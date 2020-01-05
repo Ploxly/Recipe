@@ -1,4 +1,7 @@
 import sys
+import pyAesCrypt
+bufferSize = 64 * 1024
+password = "ilike2020"
 #import json
 
 # Recipe is a representation of a cooking recipe
@@ -70,21 +73,27 @@ def listrecipe():
     #else:
         #print("you're terrible shane") or print("you suck shane")
 
-def update():
+def update(): 
     print("update")
 
 def delete():
     print("delete")
 
+def decrypt():
+    pyAesCrypt.decryptFile('recipe.txt.aes','recipe.txt', password, bufferSize)
+
+def encrypt():
+    pyAesCrypt.encryptFile('recipe.txt','recipe.txt.aes', password, bufferSize)
+
 def main():
     # check if user has entered enough arguments
     if len(sys.argv) != 2:
-        print("Usage: recipe <Action> [args]")
+        print("Usage: recipe <Action> <Key> [args]")
         sys.exit(1)
 
     #argv stores arguments to your program
     action = sys.argv[1]
-    
+    decrypt()
     if "create" == action:
         create()
     elif "list" == action:
@@ -96,4 +105,25 @@ def main():
     else:
         print("command not found")
         sys.exit(1)
+    encrypt()
 main()
+
+#https://pypi.org/project/pyAesCrypt/
+#
+# 1 dictionary (in memory)
+# 2 str(dictionary) -> write to file
+# 3 str(dictionary)
+# 4 dictionary
+
+# 1 dict (in memory)
+# 2 encoding -> dict --- byteEncodeDict 
+# 3 byteEncodedDict -> writetofile
+# 4 byteDecodeDict -> in memory
+
+# 1 memory
+# 2 encode
+# 3 write to file
+# 4 open program
+# 5 read the file
+# 6 decode
+# 7 memory

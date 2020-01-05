@@ -41,4 +41,5 @@ User x> Backend
 
 Homework: 08/28/2019
 # Commit what you have to the pull request and and wait for approval before merging it to master
-# Finish the Create and List Recipe functions make the list recipe function pretty.
+# Finish the Create and List Recipe functions make the list recipe function pretty.The list recipe function should be able to take a recipe name and print out just that recipe. For the purposes of this homework you can comment out the actions switch statement/if statements and just call create and list recipe from the main function.
+#Create another pull request when completed
